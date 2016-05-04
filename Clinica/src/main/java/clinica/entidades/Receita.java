@@ -15,4 +15,6 @@ public class Receita {
 	@ManyToMany
 	private List<Medicamento> medicamentos;
 	private String descricao;
+	
+	
 }

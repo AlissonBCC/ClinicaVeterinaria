@@ -10,6 +10,8 @@ public class Raca {
 	@GeneratedValue
 	private long id;
 	private String nome;
+	
+	
 	public Raca() {
 	
 	}
