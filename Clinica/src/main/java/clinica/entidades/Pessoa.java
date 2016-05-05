@@ -1,5 +1,7 @@
 package clinica.entidades;
 
+import org.hibernate.validator.constraints.br.CPF;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,10 +17,13 @@ public class Pessoa {
 	@GeneratedValue
 	private long id;
 	private String nome;
+	@CPF
 	private String cpf;
+
 	private String senha;
 	private String telefone;
 	private String email;
+
 	@ManyToOne(cascade = CascadeType.ALL)
 	private Endereco endereco;
 
@@ -50,10 +55,6 @@ public class Pessoa {
 		this.cpf = cpf;
 	}
 
-	public String getSenha() {
-		return senha;
-	}
-
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
@@ -81,5 +82,4 @@ public class Pessoa {
 	public void setEndereco(Endereco endereco) {
 		this.endereco = endereco;
 	}
-
 }
