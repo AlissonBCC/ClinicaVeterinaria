@@ -7,13 +7,13 @@ import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 
 @Entity
-@Inheritance(strategy=InheritanceType.JOINED)
+@Inheritance(strategy = InheritanceType.JOINED)
 public class Produto {
 	@Id
 	@GeneratedValue
 	private long id;
 	private double preco;
-	
+
 	public long getId() {
 		return id;
 	}
