@@ -20,7 +20,7 @@ public class Pessoa {
 	private String telefone;
 	private String email;
 	@ManyToOne(cascade = CascadeType.ALL)
-	private Endereco Endereco;
+	private Endereco endereco;
 
 	public Pessoa() {
 
@@ -75,11 +75,11 @@ public class Pessoa {
 	}
 
 	public Endereco getEndereco() {
-		return Endereco;
+		return endereco;
 	}
 
 	public void setEndereco(Endereco endereco) {
-		Endereco = endereco;
+		this.endereco = endereco;
 	}
 
 }
