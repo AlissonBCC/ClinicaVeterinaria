@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Calendario {
@@ -13,9 +14,9 @@ public class Calendario {
 	@GeneratedValue
 	private long id;
 	private Date data;
-	@ManyToOne
+	@OneToOne
 	private Medicamento medicamento;
-	
+
 	public Calendario() {
 	}
 
@@ -42,8 +43,5 @@ public class Calendario {
 	public void setMedicamento(Medicamento medicamento) {
 		this.medicamento = medicamento;
 	}
-	
-	
-	
-	
+
 }

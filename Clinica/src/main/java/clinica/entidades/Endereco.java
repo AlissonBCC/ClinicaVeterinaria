@@ -3,6 +3,7 @@ package clinica.entidades;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+
 @Entity
 public class Endereco {
 	@Id
@@ -11,13 +12,13 @@ public class Endereco {
 	private String rua;
 	private String numero;
 	private String cep;
-	private String bairro; 
+	private String bairro;
 	private String estado;
 	private String complemento;
 	private String cidade;
-	
-	public Endereco(){
-		
+
+	public Endereco() {
+
 	}
 
 	public long getId() {
@@ -83,7 +84,5 @@ public class Endereco {
 	public void setCidade(String cidade) {
 		this.cidade = cidade;
 	}
-	
-	
-	
+
 }

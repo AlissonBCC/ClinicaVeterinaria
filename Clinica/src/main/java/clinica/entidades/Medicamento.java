@@ -1,22 +1,20 @@
 package clinica.entidades;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 
 @Entity
-public class Medicamento {
-	@Id
-	@GeneratedValue
-	private long id;
+@Inheritance(strategy = InheritanceType.JOINED)
+public class Medicamento extends Produto {
+
 	private String nome;
 	private String formula;
 	private String usos;
 	private String contras;
-	private double preco;
-	
+
 	public Medicamento() {
-	
+
 	}
 
 	public String getNome() {
@@ -51,13 +49,4 @@ public class Medicamento {
 		this.contras = contras;
 	}
 
-	public double getPreco() {
-		return preco;
-	}
-
-	public void setPreco(double preco) {
-		this.preco = preco;
-	}
-	
-	
 }

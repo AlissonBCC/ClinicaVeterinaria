@@ -15,6 +15,32 @@ public class Receita {
 	@ManyToMany
 	private List<Medicamento> medicamentos;
 	private String descricao;
-	
-	
+
+	public Receita() {
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public List<Medicamento> getMedicamentos() {
+		return medicamentos;
+	}
+
+	public void setMedicamentos(List<Medicamento> medicamentos) {
+		this.medicamentos = medicamentos;
+	}
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
 }
